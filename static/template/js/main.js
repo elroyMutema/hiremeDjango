@@ -1,6 +1,27 @@
 (function ($) {
     "use strict";
     
+    // Form to Whatsapp
+    function sendToWhatsapp(){
+        var number="+27679704895";
+        var name=document.querySelector('.name').value;
+        var email=document.querySelector('.email').value;
+        var count=document.querySelector('.count').value;
+        // var service=document.querySelector('.service').value;
+        // var type=document.querySelector('.type').value;
+        var description=document.querySelector('.description').value;
+
+        var url     = "https://wa.me/" + number + "?text="
+        + "Name: " +name+ "%0a"
+        + "Email" +email+ "%0a"
+        + "Count" +count+ "%0a"
+        // + "Service" +service+ "%0a"
+        // + "Type" +type+ "%0a"
+        + "Description" +description+ "%0a%0a";
+
+        window.open(url, '_blank').focus();
+    }
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {

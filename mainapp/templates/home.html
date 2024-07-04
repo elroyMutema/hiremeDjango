@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>CleanMe - hireme.online</title>
+        <title>CleanMe - HireMe.Online</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Cleaning Company Website Template" name="keywords">
         <meta content="Cleaning Company Website Template" name="description">
@@ -36,19 +36,13 @@
                         <div class="col-lg-3">
                             <div class="brand">
                                 <a href="index.html">
-                                    hireme.online
+                                    HireMe.Online
                                     <!-- <img src="img/logo.png" alt="Logo"> -->
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-9">
                             <div class="topbar">
-                                <div class="topbar-col">
-                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
-                                </div>
-                                <div class="topbar-col">
-                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
-                                </div>
                                 <div class="topbar-col">
                                     <div class="topbar-social">
                                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -85,20 +79,31 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form">
-                                <h3>Get A Quote</h3>
+                                <h3>Live Chat</h3>
                                 <form>
-                                    <input class="form-control" type="text" placeholder="Your Name">
-                                    <input class="form-control" type="text" placeholder="Mobile Number">
-                                    <div class="control-group">
+                                    <input id="name" class="form-control" type="name" placeholder="Your Name">
+                                    <input id="email" class="form-control" type="email" placeholder="Email">
+                                    <input id="count" class="form-control" type="count" placeholder="Number of People Needed">
+                                    <!-- <div id="service" class="control-group" type="service">
                                         <select class="custom-select">
                                             <option selected>Choose a service</option>
                                             <option value="1">House Cleaning</option>
                                             <option value="2">Apartment Cleaning</option>
                                             <option value="3">Office Cleaning</option>
+                                            <option value="4">Other</option>
                                         </select>
                                     </div>
-                                    <textarea class="form-control" placeholder="Comment"></textarea>
-                                    <button class="btn btn-block">Get A Quote</button>
+                                    <div id="type" class="control-group" type="type">
+                                        <select class="custom-select">
+                                            <option selected>Select Service Type</option>
+                                            <option value="1">Once Off</option>
+                                            <option value="2">Contract</option>
+                                            <option value="3">Permanent</option>
+                                            <option value="4">Other</option>
+                                        </select>
+                                    </div> -->
+                                    <textarea id="description" class="form-control" type="description" placeholder="Description"></textarea>
+                                    <button class="btn btn-block" onclick="sendToWhatsapp()">Enter Live Chat</button>
                                 </form>
                             </div>
                         </div>
@@ -362,7 +367,7 @@
                 <div class="container copyright">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>&copy; <a href="hireme.online">hireme.online</a>, All Right Reserved.</p>
+                            <p>&copy; <a href="HireMe.Online">HireMe.Online</a>, All Right Reserved.</p>
                         </div>
                         <div class="col-md-6">
                             <p>Developed By <a>elroy.mutema@gmail.com</a></p>
@@ -384,7 +389,6 @@
         <script src="{% static 'template/lib/owlcarousel/owl.carousel.min.js'%}"></script>
         <script src="{% static 'template/lib/isotope/isotope.pkgd.min.js'%}"></script>
         <script src="{% static 'template/lib/lightbox/js/lightbox.min.js'%}"></script>
-
         
         <!-- Template Javascript -->
         <script src="{% static 'template/js/main.js'%}"></script>
