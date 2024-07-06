@@ -1,27 +1,46 @@
+// Form to Whatsapp
+function sendToWhatsapp(){
+
+    let number="+27679704895";
+    let name=document.getElementById('name').value;
+    let email=document.getElementById('email').value;
+    let count=document.getElementById('count').value;
+    let service= getSelectedOption(document.getElementById('servicesList'));
+    let type= getSelectedOption(document.getElementById('typeList'));
+    let description=document.getElementById('description').value;
+
+    var url     = "https://wa.me/" + number+ "?text="
+    + "Name: " + name+ "%0a"
+    + "Email: " + email+ "%0a"
+    + "Count: " + count+ "%0a"
+    
+    + "Service: " + service + "%0a"
+    
+    + "Type: " +type+ "%0a"
+    + "Description: " +description+ "%0a%0a";
+
+    window.open(url, '_blank').focus();
+}
+
+function getSelectedOption(elementList){
+
+    var options = elementList.getElementsByTagName("option");
+    // options[0]=true by default in JS 
+    // so set last element in the list as default option. wich is options[(options.length)-1]="Other" 
+    var selectedOption = options[(options.length)-1].text;
+    // and make sure loop ends at [1] to skip first item in the list 
+    for ( var i = options.length-1 ; i>0 ; i--) {
+        if (options[i].selected) {
+            selectedOption = options[i].text;
+            break;
+        }
+    }
+    return selectedOption;
+}
+
 (function ($) {
     "use strict";
     
-    // Form to Whatsapp
-    function sendToWhatsapp(){
-        var number="+27679704895";
-        var name=document.querySelector('.name').value;
-        var email=document.querySelector('.email').value;
-        var count=document.querySelector('.count').value;
-        // var service=document.querySelector('.service').value;
-        // var type=document.querySelector('.type').value;
-        var description=document.querySelector('.description').value;
-
-        var url     = "https://wa.me/" + number + "?text="
-        + "Name: " +name+ "%0a"
-        + "Email" +email+ "%0a"
-        + "Count" +count+ "%0a"
-        // + "Service" +service+ "%0a"
-        // + "Type" +type+ "%0a"
-        + "Description" +description+ "%0a%0a";
-
-        window.open(url, '_blank').focus();
-    }
-
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -91,3 +110,8 @@
     
 })(jQuery);
 
+//junk______________________________________________________________________________________________________________________________________________
+
+    //document.write(serviceSelected);
+    
+    //let type=document.getElementById('type').value;
